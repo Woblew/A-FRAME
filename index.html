@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ovo do Anjo</title>
+    <meta name="description" content="Ambiente curta de animação Ovo do Anjo" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #000022">
+      <!-- asset management system -->
+      <a-assets>
+          <img id="ceu" src="img/ceu.jpg">
+          <img id="chao" src="img/dirt_aerial_03_ao_1k.jpg">
+          <img id="chao-NRM" src="img/dirt_aerial_03_nor_1k.jpg">  
+      </a-assets>
+     
+      <!-- <a-asset-item id="galhos" src="assets/galho.gltf"></a-asset-item>-->
+      <!-- Sky 
+      <a-sky src="#ceu"
+             rotation="0 64 0">
+      </a-sky>-->
+
+      <a-sphere material="color:#1D404B;
+                          shader: standard;
+                          side: double;
+                          opacity: 0.5;
+                          rougness: 0.0001"
+                radius="3"
+                side="double"
+                position="-7 7 -8"
+                scale="1 1 1">
+      </a-sphere>
+
+      <a-circle color="#333333"
+                side="double"
+                position="-7 7 -8"
+                rotation="90 0 0">
+      </a-circle>
+
+      <!-- Ground | realistic-->
+      <a-plane material="color: #486578;
+                         src: #chao;
+                         repeat: 500 500;
+                         normal-map: #chao-NRM;
+                         normal-texture-repeat: 500 500;
+                         roughness: 0.8"
+               rotation="-90 0 0"
+               scale="10000 10000 1">
+      </a-plane>
+
+     
+
+      <!--chao
+      <a-entity obj-model="obj: #chao-object; mtl: #chao-material"
+                scale="0.1 0.1 0.1"
+                position="0 1.5 5">
+      </a-entity>-->
+
+     <!--galhos <a-entity obj-model="obj: #galhos-o; mtl: #galhos-m"
+      scale="1 1 1"
+      position="0 1.5 5"
+      rotation="0 0 0">
+      </a-entity>-->
+
+     <!-- <a-entity gltf-model="#galho"></a-entity>-->
+
+
+
+    </a-scene>
+  </body>
+</html>
